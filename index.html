@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Intrinsic Value Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-form">
+            <h2>Stock Intrinsic Value Calculator</h2>
+            <form id="stockForm">
+                <label for="stockName">Stock Name:</label>
+                <input type="text" id="stockName" name="stockName" required>
+                
+                <label for="ticker">Ticker:</label>
+                <input type="text" id="ticker" name="ticker" required>
+                
+                <label for="fcf">Free Cash Flow (FCF):</label>
+                <input type="number" id="fcf" name="fcf" required>
+                
+                <label for="growthRate">Growth Rate (%):</label>
+                <input type="number" id="growthRate" name="growthRate" step="0.01" required>
+                
+                <label for="discountRate">Discount Rate (WACC) (%):</label>
+                <input type="number" id="discountRate" name="discountRate" step="0.01" required>
+                
+                <label for="terminalValue">Terminal Value (TV):</label>
+                <input type="number" id="terminalValue" name="terminalValue" required>
+                
+                <button type="button" onclick="calculateIntrinsicValue()">Calculate</button>
+            </form>
+        </div>
+        <div class="results">
+            <h2>Calculated Intrinsic Values</h2>
+            <ul id="resultsList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
